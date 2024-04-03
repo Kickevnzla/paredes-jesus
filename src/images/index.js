@@ -1,4 +1,5 @@
-import floatingAstronaut from './floating-astronaut.png';
+import floatingAstronaut from './floating-astronaut.webp';
 import planet from './planet.webp';
+import fotoJesus from './FotoJesus.webp';
 
-export { floatingAstronaut, planet };
+export { floatingAstronaut, planet, fotoJesus };

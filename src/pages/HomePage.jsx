@@ -1,14 +1,12 @@
+import styles from './styles/HomePage.module.scss';
 import { HomeLayout } from '../components/Layouts';
 import MainBanner from '../components/MainBanner';
-import styles from './styles/HomePage.module.scss';
+import AboutMe from '../components/AboutMe';
 
 function HomePage() {
 	return (
 		<>
 			<HomeLayout>
-				{/* <div className={styles.stars}></div>
-				<div className={styles.stars2}></div>
-				<div className={styles.stars3}></div> */}
 				{[...Array(100)].map((_, index) => (
 					<svg
 						key={index}
@@ -20,6 +18,7 @@ function HomePage() {
 					</svg>
 				))}
 				<MainBanner />
+				<AboutMe />
 			</HomeLayout>
 		</>
 	);

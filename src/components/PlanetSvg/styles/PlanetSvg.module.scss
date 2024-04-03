@@ -1,0 +1,22 @@
+.planetSvg {
+	fill: none;
+	stroke: #fff;
+	stroke-width: 1.5;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+	stroke-miterlimit: 10;
+	width: 100px;
+	height: 100px;
+	overflow: visible;
+
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.planetSvg:focus {
+	outline: none;
+}

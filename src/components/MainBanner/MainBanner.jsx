@@ -4,6 +4,7 @@ import { floatingAstronaut, planet } from '../../images';
 import { motion } from 'framer-motion';
 import { useScramble } from 'use-scramble';
 import { useEffect } from 'react';
+import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
 
 const astronautVariants = {
 	hidden: {
@@ -26,6 +27,34 @@ const astronautVariants = {
 	}
 };
 
+const socialVariants = {
+	hover: {
+		scale: 1.2,
+		y: -3,
+		transition: {
+			duration: 0.3
+		}
+	}
+};
+
+const planetVariants = {
+	hidden: {
+		opacity: 0,
+		filter: 'blur(10px)'
+	},
+	idle: {
+		opacity: 1,
+		scale: 1.03,
+		filter: 'blur(0px) contrast(1.3)',
+		transition: {
+			duration: 1,
+			opacity: { duration: 0.2 },
+			scale: { duration: 4, repeat: Infinity, repeatType: 'reverse' },
+			filter: { duration: 1 }
+		}
+	}
+};
+
 function MainBanner() {
 	useEffect(() => {
 		const interval = setInterval(() => {
@@ -35,7 +64,7 @@ function MainBanner() {
 	}, []);
 
 	const { ref, replay } = useScramble({
-		text: 'Soy un apacionado programador, con un enfoque especial en el desarrollo web.',
+		text: 'Desarrollador web full stack.',
 		characters: 'lowercase',
 		speed: 1,
 		tick: 1.5,
@@ -53,8 +82,38 @@ function MainBanner() {
 			<Container>
 				<div className={styles.wrapper}>
 					<div className={styles.content}>
-						<h1>Jesús Paredes</h1>
+						<span>¡Hola!</span>
+						<h1 ref={ref}>Soy Jesús Paredes</h1>
 						<p ref={ref} />
+						<div>
+							<motion.a
+								href='https://github.com/Kickevnzla'
+								rel='noreferrer noopener'
+								target='_blank'
+								variants={socialVariants}
+								whileHover='hover'
+							>
+								<FaGithub />
+							</motion.a>
+							<motion.a
+								href='https://www.linkedin.com/in/jesús-paredes-arnaez-8725841bb'
+								rel='noreferrer noopener'
+								target='_blank'
+								variants={socialVariants}
+								whileHover='hover'
+							>
+								<FaLinkedin />
+							</motion.a>
+							<motion.a
+								href='https://www.instagram.com/kickevnzla'
+								rel='noreferrer noopener'
+								target='_blank'
+								variants={socialVariants}
+								whileHover='hover'
+							>
+								<FaInstagram />
+							</motion.a>
+						</div>
 					</div>
 					<motion.div
 						initial='hidden'
@@ -62,9 +121,17 @@ function MainBanner() {
 						variants={astronautVariants}
 						className={styles.image}
 					>
-						<img src={floatingAstronaut} alt='Main Banner' />
+						<img draggable='false' src={floatingAstronaut} alt='Main Banner' />
 					</motion.div>
-					<img src={planet} alt='Planet image' className={styles.planet} />
+					<motion.img
+						draggable='false'
+						src={planet}
+						alt='Planet image'
+						className={styles.planet}
+						initial='hidden'
+						animate='idle'
+						variants={planetVariants}
+					/>
 				</div>
 			</Container>
 		</section>

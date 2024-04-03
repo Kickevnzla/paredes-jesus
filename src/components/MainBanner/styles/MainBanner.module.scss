@@ -5,7 +5,9 @@
 	align-items: center;
 	justify-content: center;
 	height: calc(100vh - 100px);
+	max-height: 1000px;
 	position: relative;
+	border-bottom: 1px solid gray;
 
 	.content {
 		display: flex;
@@ -15,9 +17,20 @@
 		height: 80%;
 		width: 50%;
 		transform: translateY(-150px);
+		gap: 0.5em;
 
 		p {
 			max-width: 50ch;
+		}
+
+		div {
+			display: flex;
+			align-items: center;
+			gap: 1em;
+
+			svg {
+				font-size: 1.5rem;
+			}
 		}
 	}
 
@@ -32,14 +45,80 @@
 		img {
 			max-width: 100%;
 			transform: scaleX(-1) rotate(-60deg);
+			user-select: none;
 		}
 	}
 
 	.planet {
 		position: absolute;
-		width: 900px;
+		width: 1024px;
 		z-index: 2;
-		top: 50%;
+		bottom: -500px;
 		left: -30%;
+		user-select: none;
+	}
+}
+
+@media (max-width: 1280px) {
+	.wrapper {
+		.planet {
+			width: 850px;
+			bottom: -400px;
+			left: -35%;
+		}
+	}
+}
+
+@media (max-width: 1024px) {
+	.wrapper {
+		.planet {
+			width: 650px;
+			bottom: -300px;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.wrapper {
+		.planet {
+			width: 500px;
+			bottom: -200px;
+		}
+	}
+}
+
+@media (max-width: 640px) {
+	.wrapper {
+		.planet {
+			width: 400px;
+			bottom: -150px;
+		}
+	}
+}
+
+@media (max-width: 320px) {
+	.wrapper {
+		flex-direction: column;
+		.content {
+			align-items: start;
+			justify-content: start;
+			width: 100%;
+			transform: none;
+			flex-shrink: 10;
+			h1 {
+				font-size: 2rem;
+			}
+			p {
+				font-size: 0.8rem;
+			}
+		}
+		.image {
+			align-items: start;
+			width: 100%;
+		}
+		.planet {
+			width: 300px;
+			bottom: -100px;
+		}
 	}
 }
