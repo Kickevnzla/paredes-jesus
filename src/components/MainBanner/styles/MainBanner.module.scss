@@ -1,0 +1,45 @@
+@import '../../../styles/variables.scss';
+
+.wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: calc(100vh - 100px);
+	position: relative;
+
+	.content {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: start;
+		height: 80%;
+		width: 50%;
+		transform: translateY(-150px);
+
+		p {
+			max-width: 50ch;
+		}
+	}
+
+	.image {
+		width: 50%;
+		height: 80%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		z-index: 3;
+
+		img {
+			max-width: 100%;
+			transform: scaleX(-1) rotate(-60deg);
+		}
+	}
+
+	.planet {
+		position: absolute;
+		width: 900px;
+		z-index: 2;
+		top: 50%;
+		left: -30%;
+	}
+}

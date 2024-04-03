@@ -1,0 +1,96 @@
+@import '../../../styles/variables.scss';
+
+.navBarContainer {
+	width: 100%;
+	top: 0;
+	left: 0;
+	padding: 1em 0;
+	z-index: 999;
+	position: fixed;
+}
+
+.navBar {
+	width: 100%;
+	height: 72px;
+	display: flex;
+	z-index: 97;
+	justify-content: space-between;
+	align-items: center;
+
+	.navLogoContainer {
+		display: flex;
+		align-items: center;
+
+		img {
+			transition: transform 0.3s;
+			cursor: pointer;
+
+			&:hover {
+				transform: scale(1.1);
+			}
+		}
+	}
+}
+
+.logo {
+	width: 10rem;
+}
+
+.navBarMenu {
+	display: flex;
+	align-items: center;
+	list-style-type: none;
+	justify-content: right;
+	gap: 1.5em;
+}
+
+.navBarMenu li {
+	width: min-content;
+}
+
+.navBarMenu li a {
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: bold;
+	white-space: nowrap;
+	cursor: pointer;
+}
+
+.navBarMenu li:hover {
+	transform: scale(1.1);
+	transition: 0.3s;
+}
+
+.navBarMenu li a:hover {
+	color: $color-2;
+}
+
+/* sm */
+@media (max-width: 640px) {
+	.navBarMenu {
+		display: none;
+	}
+
+	.navBarMenu.isOpen {
+		display: block;
+		margin-right: 0;
+	}
+
+	.navBarMenu {
+		flex-direction: column;
+		position: fixed;
+		right: 0;
+		top: 72px;
+		align-items: start;
+		background-color: rgb(82, 99, 110);
+		padding: 2.5em 1.5em;
+	}
+
+	.navBarMenu li {
+		padding: 0.5em 0;
+	}
+
+	.navBarMenu li a {
+		color: #fff;
+	}
+}
