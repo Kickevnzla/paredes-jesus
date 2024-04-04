@@ -7,7 +7,6 @@
 	height: calc(100vh - 100px);
 	max-height: 1000px;
 	position: relative;
-	border-bottom: 1px solid gray;
 
 	.content {
 		display: flex;
@@ -18,6 +17,10 @@
 		width: 50%;
 		transform: translateY(-150px);
 		gap: 0.5em;
+
+		span {
+			font-size: 1.3rem;
+		}
 
 		p {
 			max-width: 50ch;

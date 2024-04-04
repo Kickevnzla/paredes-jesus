@@ -1,0 +1,25 @@
+.workWithMeContainer {
+	margin: 4em 0 4em 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.workWithMe {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	div:nth-child(odd) {
+		width: 45%;
+	}
+	div:nth-child(even) {
+		width: 10%;
+		display: flex;
+		justify-content: center;
+		svg {
+			width: 5px;
+		}
+	}
+}

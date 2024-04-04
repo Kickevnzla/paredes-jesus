@@ -7,7 +7,16 @@ import PlanetSvg from '../PlanetSvg';
 const navBarVariants = {
 	visible: { opacity: 1, y: 0 },
 	hidden: { opacity: 0, y: -100 },
-	background: { backgroundColor: 'rgba(255, 255, 255, 0.05)' }
+	background: {
+		backdropFilter: 'blur(10px)',
+		boxShadow:
+			'rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px'
+	},
+	transition: {
+		visible: { duration: 0.5, ease: 'easeIn' },
+		hidden: { duration: 0.5, ease: 'easeIn' },
+		background: { duration: 0.5, ease: 'easeIn' }
+	}
 };
 
 const HomeNavBar = () => {
@@ -34,7 +43,6 @@ const HomeNavBar = () => {
 		<motion.div
 			variants={navBarVariants}
 			animate={hidden ? 'hidden' : transparency ? 'visible' : 'background'}
-			transition={{ duration: 0.5, ease: 'easeInOut' }}
 			className={styles.navBarContainer}
 		>
 			<Container>
