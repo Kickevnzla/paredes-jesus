@@ -4,22 +4,30 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-}
+	gap: 5em;
 
-.workWithMe {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-
-	div:nth-child(odd) {
-		width: 45%;
+	.workWithMe {
+		position: relative;
 	}
-	div:nth-child(even) {
-		width: 10%;
-		display: flex;
-		justify-content: center;
+
+	.separator {
+		position: absolute;
+		height: 100%;
+
 		svg {
-			width: 5px;
+			position: absolute;
+			height: 100%;
+			top: 0;
+			left: 50%;
+			transform: translate(-50%, 0%);
 		}
+	}
+
+	.steps {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 5em;
 	}
 }

@@ -1,6 +1,6 @@
 import Container from '../Container/Container';
 import styles from './styles/MainBanner.module.scss';
-import { floatingAstronaut, planet } from '../../images';
+import { floatingAstronaut, planet1 } from '../../images';
 import { motion } from 'framer-motion';
 import { useScramble } from 'use-scramble';
 import { useEffect } from 'react';
@@ -125,7 +125,7 @@ function MainBanner() {
 					</motion.div>
 					<motion.img
 						draggable='false'
-						src={planet}
+						src={planet1}
 						alt='Planet image'
 						className={styles.planet}
 						initial='hidden'
