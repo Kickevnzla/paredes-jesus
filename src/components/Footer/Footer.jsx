@@ -48,7 +48,10 @@ const Footer = () => {
 							<FaInstagram />
 						</motion.a>
 					</div>
-					<span>Diseño y desarrollo por Jesús Paredes.</span>
+					<span>
+						Diseño y desarrollo por{' '}
+						<span className={styles.nombre}>Jesús Paredes.</span>
+					</span>
 				</div>
 				<div className={styles.content}>
 					<span>

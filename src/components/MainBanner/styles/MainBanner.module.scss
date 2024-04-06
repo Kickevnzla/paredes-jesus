@@ -17,6 +17,7 @@
 		width: 50%;
 		transform: translateY(-150px);
 		gap: 0.5em;
+		z-index: 3;
 
 		span {
 			font-size: 1.3rem;
@@ -31,8 +32,10 @@
 			align-items: center;
 			gap: 1em;
 
-			svg {
-				font-size: 1.5rem;
+			a {
+				svg {
+					font-size: 1.5rem;
+				}
 			}
 		}
 	}
@@ -60,6 +63,7 @@
 		left: -60%;
 		user-select: none;
 		rotate: -10deg;
+		z-index: 2;
 	}
 }
 
