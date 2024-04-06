@@ -6,6 +6,10 @@
 	align-items: center;
 	gap: 5em;
 
+	h1 {
+		text-align: center;
+	}
+
 	.workWithMe {
 		position: relative;
 	}
@@ -29,5 +33,15 @@
 		justify-content: center;
 		align-items: center;
 		gap: 5em;
+	}
+}
+
+@media (max-width: 768px) {
+	.workWithMeContainer {
+		.separator {
+			left: 0;
+			top: 0;
+			transform: translate(-50, 0%);
+		}
 	}
 }
