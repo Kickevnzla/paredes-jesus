@@ -19,7 +19,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	border-left: 1px solid #fff;
+	border-left: 3px solid #fff;
 	width: 100%;
 
 	.content {
@@ -90,7 +90,4 @@
 			}
 		}
 	}
-}
-
-@media (max-width: 640px) {
 }

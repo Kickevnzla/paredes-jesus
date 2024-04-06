@@ -6,12 +6,13 @@
 	height: 20px;
 }
 
-$total: 100;
+$total: 150;
 @for $i from 1 through $total {
 	$scale: random(2) - 0.4;
 
 	.star:nth-child(#{$i}) {
 		left: random(120) * 1% - 20;
+		bottom: random(120) * 1% - 20;
 		transform: scale($scale);
 
 		animation: raise#{$i} 7 + random(60) + s linear infinite;
@@ -22,7 +23,7 @@ $total: 100;
 
 	@keyframes raise#{$i} {
 		to {
-			bottom: 400vh;
+			bottom: 600vh;
 			transform: scale(0.3);
 		}
 	}

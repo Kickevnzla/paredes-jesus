@@ -10,7 +10,7 @@ function HomePage() {
 		<>
 			<HomeLayout>
 				<div>
-					{[...Array(100)].map((_, index) => (
+					{[...Array(150)].map((_, index) => (
 						<svg
 							key={index}
 							className={styles.star}

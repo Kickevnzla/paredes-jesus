@@ -40,25 +40,21 @@ function WorkWithMe() {
 							</svg>
 						</div>
 						<WorkWithMeArticle
-							className={styles.article}
 							title='Desarrollador de aplicaciones móviles'
 							parraph='Desarrollador de aplicaciones móviles con React Native. He
 									realizado aplicaciones móviles para Android y iOS.'
 						/>
 						<WorkWithMeArticle
-							className={styles.article}
 							title='Desarrollador de aplicaciones móviles'
 							parraph='Desarrollador de aplicaciones móviles con React Native. He
 									realizado aplicaciones móviles para Android y iOS.'
 						/>
 						<WorkWithMeArticle
-							className={styles.article}
 							title='Desarrollador de aplicaciones móviles'
 							parraph='Desarrollador de aplicaciones móviles con React Native. He
 									realizado aplicaciones móviles para Android y iOS.'
 						/>
 						<WorkWithMeArticle
-							className={styles.article}
 							title='Desarrollador de aplicaciones móviles'
 							parraph='Desarrollador de aplicaciones móviles con React Native. He
 									realizado aplicaciones móviles para Android y iOS.'

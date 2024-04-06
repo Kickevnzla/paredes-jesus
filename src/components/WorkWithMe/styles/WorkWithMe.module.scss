@@ -2,46 +2,49 @@
 	margin: 4em 0 4em 0;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: start;
 	align-items: center;
 	gap: 5em;
 
 	h1 {
 		text-align: center;
+		width: 100%;
 	}
 
-	.workWithMe {
+	.steps {
+		height: 900px;
+		display: flex;
+		flex-direction: column;
+		justify-content: start;
+		align-items: center;
+		gap: 5em;
 		position: relative;
 	}
 
 	.separator {
 		position: absolute;
 		height: 100%;
-
-		svg {
-			position: absolute;
-			height: 100%;
-			top: 0;
-			left: 50%;
-			transform: translate(-50%, 0%);
-		}
-	}
-
-	.steps {
+		width: 1px;
 		display: flex;
-		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		gap: 5em;
+
+		svg {
+			height: 100%;
+			overflow: visible;
+		}
 	}
 }
 
 @media (max-width: 768px) {
 	.workWithMeContainer {
+		align-items: start;
+
 		.separator {
 			left: 0;
-			top: 0;
-			transform: translate(-50, 0%);
+			svg {
+				width: 5px;
+			}
 		}
 	}
 }
