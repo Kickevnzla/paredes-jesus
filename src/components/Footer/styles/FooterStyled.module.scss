@@ -43,10 +43,38 @@
 	}
 }
 
+.nombre {
+	color: $color-4;
+}
+
 @media (max-width: 640px) {
 	.footer {
 		.content {
 			gap: 1.5em;
+		}
+	}
+}
+
+@media (max-width: 475px) {
+	.footer {
+		align-items: center;
+		justify-self: center;
+		flex-direction: column;
+		gap: 1.5em;
+
+		.content {
+			max-width: 100%;
+			span {
+				width: 100%;
+				text-align: center;
+			}
+		}
+		.content:first-child {
+			.socialMedia {
+				width: 100%;
+				justify-content: center;
+				align-items: center;
+			}
 		}
 	}
 }

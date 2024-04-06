@@ -18,7 +18,7 @@ $total: 150;
 		animation: raise#{$i} 7 + random(60) + s linear infinite;
 		animation-delay: random#{$i} - 5 + s;
 
-		z-index: 1;
+		z-index: 0;
 	}
 
 	@keyframes raise#{$i} {
