@@ -1,28 +1,29 @@
 .star {
 	position: absolute;
-	bottom: 100px;
 	fill: white;
+	bottom: 0;
 	width: 20px;
 	height: 20px;
 }
 
-$total: 100;
+$total: 150;
 @for $i from 1 through $total {
 	$scale: random(2) - 0.4;
 
 	.star:nth-child(#{$i}) {
 		left: random(120) * 1% - 20;
+		bottom: random(120) * 1% - 20;
 		transform: scale($scale);
 
-		animation: raise#{$i} 6 + random(15) + s linear infinite;
-		animation-delay: random(5) - 5 + s;
+		animation: raise#{$i} 7 + random(60) + s linear infinite;
+		animation-delay: random#{$i} - 5 + s;
 
 		z-index: 1;
 	}
 
 	@keyframes raise#{$i} {
 		to {
-			bottom: 150vh;
+			bottom: 600vh;
 			transform: scale(0.3);
 		}
 	}

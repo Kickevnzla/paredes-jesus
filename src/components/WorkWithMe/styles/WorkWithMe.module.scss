@@ -1,0 +1,50 @@
+.workWithMeContainer {
+	margin: 4em 0 4em 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+	align-items: center;
+	gap: 5em;
+
+	h1 {
+		text-align: center;
+		width: 100%;
+	}
+
+	.steps {
+		height: 900px;
+		display: flex;
+		flex-direction: column;
+		justify-content: start;
+		align-items: center;
+		gap: 5em;
+		position: relative;
+	}
+
+	.separator {
+		position: absolute;
+		height: 100%;
+		width: 1px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		svg {
+			height: 100%;
+			overflow: visible;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.workWithMeContainer {
+		align-items: start;
+
+		.separator {
+			left: 0;
+			svg {
+				width: 5px;
+			}
+		}
+	}
+}

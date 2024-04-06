@@ -1,0 +1,93 @@
+.experienceContainer {
+	margin: 13em 0 13em 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 5em;
+
+	.sateliteMovile {
+		display: none;
+	}
+
+	h1 {
+		z-index: 3;
+	}
+}
+
+.experience {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-left: 3px solid #fff;
+	width: 100%;
+
+	.content {
+		width: 50%;
+		margin-inline: 3em;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 3em;
+
+		h2 {
+			text-align: start;
+			margin-bottom: 1em;
+		}
+		p {
+			text-align: start;
+			text-wrap: balance;
+			max-width: 50ch;
+		}
+	}
+
+	.image {
+		position: relative;
+		width: 50%;
+
+		img {
+			position: absolute;
+			width: 1024px;
+			z-index: 2;
+			bottom: -300px;
+			left: 10px;
+			user-select: none;
+			rotate: 180deg;
+		}
+	}
+}
+
+@media (max-width: 1024px) {
+	.experience {
+		.image {
+			img {
+				width: 700px;
+				bottom: -100px;
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.experienceContainer {
+		margin: 1em 0 1em 0;
+
+		.sateliteMovile {
+			display: block;
+			width: 80%;
+			user-select: none;
+			rotate: 180deg;
+		}
+		.experience {
+			justify-content: start;
+			.content {
+				width: 80%;
+			}
+
+			.image {
+				display: none;
+			}
+		}
+	}
+}
