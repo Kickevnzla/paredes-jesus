@@ -1,0 +1,18 @@
+@import '../../../styles/variables.scss';
+
+.goTop {
+	margin-top: 5em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	button {
+		background-color: transparent;
+		padding: 0.5em;
+		border: 1px solid $color-4;
+		border-radius: 10px;
+		color: #fff;
+		width: fit-content;
+		cursor: pointer;
+	}
+}
