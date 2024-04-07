@@ -1,0 +1,59 @@
+@import '../../../styles/variables.scss';
+
+.contactContainer {
+	margin-top: 5em;
+
+	h1 {
+		text-align: center;
+	}
+
+	.contact {
+		margin-top: 3em;
+		display: flex;
+		justify-content: center;
+		align-content: center;
+		gap: 1em;
+
+		.left,
+		.right {
+			width: 50%;
+		}
+
+		.left {
+			display: flex;
+			flex-direction: column;
+			gap: 1em;
+		}
+
+		.right {
+			border: 1px solid $color-4;
+			border-radius: 20px;
+			padding: 1em;
+			z-index: 3;
+
+			form {
+				display: flex;
+				flex-direction: column;
+				gap: 1em;
+
+				input,
+				textarea {
+					padding: 0.5em;
+					border: 1px solid $color-4;
+					border-radius: 5px;
+					resize: none;
+				}
+
+				button {
+					background-color: transparent;
+					padding: 0.5em;
+					border: 1px solid $color-4;
+					border-radius: 10px;
+					color: #fff;
+					width: fit-content;
+					cursor: pointer;
+				}
+			}
+		}
+	}
+}

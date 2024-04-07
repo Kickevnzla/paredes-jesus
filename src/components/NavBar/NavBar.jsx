@@ -48,21 +48,107 @@ const HomeNavBar = () => {
 			<Container>
 				<header>
 					<nav className={styles.navBar}>
-						<a draggable='false' href='#'>
+						<a
+							draggable='false'
+							onClick={() => {
+								window.scrollTo({
+									top: 0,
+									behavior: 'smooth'
+								});
+							}}
+						>
 							<PlanetSvg />
 						</a>
 						<ul>
 							<li>
-								<a>Sobre mi</a>
+								<a
+									onClick={() => {
+										window.scrollTo({
+											top:
+												document
+													.getElementById('aboutMe')
+													.getBoundingClientRect().top +
+												window.scrollY -
+												150,
+											behavior: 'smooth'
+										});
+									}}
+									aria-label='Link a la sección sobre mi.'
+								>
+									Sobre mi
+								</a>
 							</li>
 							<li>
-								<a>Experiencia</a>
+								<a
+									onClick={() => {
+										window.scrollTo({
+											top:
+												document
+													.getElementById('experience')
+													.getBoundingClientRect().top +
+												window.scrollY -
+												150,
+											behavior: 'smooth'
+										});
+									}}
+									aria-label='Link a la sección de experiencia.'
+								>
+									Experiencia
+								</a>
 							</li>
 							<li>
-								<a>Proyectos</a>
+								<a
+									onClick={() => {
+										window.scrollTo({
+											top:
+												document
+													.getElementById('workWithMe')
+													.getBoundingClientRect().top +
+												window.scrollY -
+												150,
+											behavior: 'smooth'
+										});
+									}}
+									aria-label='Link a la sección de trabaja conmigo.'
+								>
+									Trabaja conmigo
+								</a>
 							</li>
 							<li>
-								<a>Contacto</a>
+								<a
+									onClick={() => {
+										window.scrollTo({
+											top:
+												document
+													.getElementById('proyects')
+													.getBoundingClientRect().top +
+												window.scrollY -
+												150,
+											behavior: 'smooth'
+										});
+									}}
+									aria-label='Link a la sección de proyectos.'
+								>
+									Proyectos
+								</a>
+							</li>
+							<li>
+								<a
+									onClick={() => {
+										window.scrollTo({
+											top:
+												document
+													.getElementById('contact')
+													.getBoundingClientRect().top +
+												window.scrollY -
+												150,
+											behavior: 'smooth'
+										});
+									}}
+									aria-label='Link a la sección de contacto.'
+								>
+									Contacto
+								</a>
 							</li>
 						</ul>
 					</nav>

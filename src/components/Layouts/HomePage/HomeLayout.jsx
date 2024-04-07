@@ -1,11 +1,12 @@
 import NavBar from '../../NavBar';
 import Footer from '../../Footer';
+import Container from '../../Container';
 
 const HomeLayout = ({ children }) => {
 	return (
 		<>
 			<NavBar />
-			{children}
+			<Container>{children}</Container>
 			<Footer />
 		</>
 	);

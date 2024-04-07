@@ -4,6 +4,9 @@ import MainBanner from '../components/MainBanner';
 import AboutMe from '../components/AboutMe';
 import Experience from '../components/Experience';
 import WorkWithMe from '../components/WorkWithMe';
+import Proyects from '../components/Proyects';
+import Contact from '../components/Contact';
+import GoTop from '../components/GoTop';
 
 function HomePage() {
 	return (
@@ -25,6 +28,9 @@ function HomePage() {
 				<AboutMe />
 				<Experience />
 				<WorkWithMe />
+				<Proyects />
+				<Contact />
+				<GoTop />
 			</HomeLayout>
 		</>
 	);

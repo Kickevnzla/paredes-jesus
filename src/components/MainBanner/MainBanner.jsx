@@ -1,4 +1,3 @@
-import Container from '../Container/Container';
 import styles from './styles/MainBanner.module.scss';
 import { floatingAstronaut, planet1 } from '../../images';
 import { motion } from 'framer-motion';
@@ -78,62 +77,60 @@ function MainBanner() {
 	});
 
 	return (
-		<section>
-			<Container>
-				<div className={styles.wrapper}>
-					<div className={styles.content}>
-						<span>¡Hola!</span>
-						<h1 ref={ref}>Soy Jesús Paredes</h1>
-						<p ref={ref} />
-						<div>
-							<motion.a
-								href='https://github.com/Kickevnzla'
-								rel='noreferrer noopener'
-								target='_blank'
-								variants={socialVariants}
-								whileHover='hover'
-							>
-								<FaGithub />
-							</motion.a>
-							<motion.a
-								href='https://www.linkedin.com/in/jesús-paredes-arnaez-8725841bb'
-								rel='noreferrer noopener'
-								target='_blank'
-								variants={socialVariants}
-								whileHover='hover'
-							>
-								<FaLinkedin />
-							</motion.a>
-							<motion.a
-								href='https://www.instagram.com/kickevnzla'
-								rel='noreferrer noopener'
-								target='_blank'
-								variants={socialVariants}
-								whileHover='hover'
-							>
-								<FaInstagram />
-							</motion.a>
-						</div>
+		<section id='mainBanner'>
+			<div className={styles.wrapper}>
+				<div className={styles.content}>
+					<span>¡Hola!</span>
+					<h1 ref={ref}>Soy Jesús Paredes</h1>
+					<p ref={ref} />
+					<div>
+						<motion.a
+							href='https://github.com/Kickevnzla'
+							rel='noreferrer noopener'
+							target='_blank'
+							variants={socialVariants}
+							whileHover='hover'
+						>
+							<FaGithub />
+						</motion.a>
+						<motion.a
+							href='https://www.linkedin.com/in/jesús-paredes-arnaez-8725841bb'
+							rel='noreferrer noopener'
+							target='_blank'
+							variants={socialVariants}
+							whileHover='hover'
+						>
+							<FaLinkedin />
+						</motion.a>
+						<motion.a
+							href='https://www.instagram.com/kickevnzla'
+							rel='noreferrer noopener'
+							target='_blank'
+							variants={socialVariants}
+							whileHover='hover'
+						>
+							<FaInstagram />
+						</motion.a>
 					</div>
-					<motion.div
-						initial='hidden'
-						animate='idle'
-						variants={astronautVariants}
-						className={styles.image}
-					>
-						<img draggable='false' src={floatingAstronaut} alt='Main Banner' />
-					</motion.div>
-					<motion.img
-						draggable='false'
-						src={planet1}
-						alt='Planet image'
-						className={styles.planet}
-						initial='hidden'
-						animate='idle'
-						variants={planetVariants}
-					/>
 				</div>
-			</Container>
+				<motion.div
+					initial='hidden'
+					animate='idle'
+					variants={astronautVariants}
+					className={styles.image}
+				>
+					<img draggable='false' src={floatingAstronaut} alt='Main Banner' />
+				</motion.div>
+				<motion.img
+					draggable='false'
+					src={planet1}
+					alt='Planet image'
+					className={styles.planet}
+					initial='hidden'
+					animate='idle'
+					variants={planetVariants}
+				/>
+			</div>
 		</section>
 	);
 }
