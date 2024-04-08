@@ -13,7 +13,7 @@ const socialVariants = {
 	}
 };
 
-const Footer = () => {
+function Footer() {
 	return (
 		<Container>
 			<footer className={styles.footer}>
@@ -62,6 +62,6 @@ const Footer = () => {
 			</footer>
 		</Container>
 	);
-};
+}
 
 export default Footer;
