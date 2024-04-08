@@ -20,25 +20,7 @@
 	.burger {
 		display: none;
 		font-size: 2rem;
-	}
-
-	ul {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		gap: 1em;
-		text-transform: uppercase;
 		cursor: pointer;
-
-		li {
-			list-style: none;
-			a {
-				text-decoration: none;
-				color: white;
-				font-size: 1.1rem;
-				font-weight: 500;
-			}
-		}
 	}
 }
 
@@ -46,34 +28,6 @@
 	.navBar {
 		.burger {
 			display: block;
-			cursor: pointer;
-		}
-
-		ul {
-			display: none;
-		}
-
-		ul.mobileNavOpen {
-			display: block;
-			flex-direction: column;
-			position: absolute;
-			top: 4.5em;
-			left: 0;
-			width: 100%;
-			background-color: $color-1;
-			padding: 1em 0;
-			z-index: 99;
-
-			li {
-				text-align: center;
-				padding: 1em 0;
-				border-bottom: 1px solid white;
-				a {
-					color: white;
-					font-size: 1.1rem;
-					font-weight: 500;
-				}
-			}
 		}
 	}
 }

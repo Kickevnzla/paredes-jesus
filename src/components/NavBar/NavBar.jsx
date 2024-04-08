@@ -4,28 +4,42 @@ import { motion, useScroll, useMotionValueEvent } from 'framer-motion';
 import Container from '../Container/Container';
 import PlanetSvg from '../PlanetSvg';
 import { FaHamburger } from 'react-icons/fa';
+import DesktopNav from '../DesktopNav';
+import MobileNav from '../MobileNav';
 
 const navBarVariants = {
-	visible: { opacity: 1, y: 0 },
-	hidden: { opacity: 0, y: -100 },
+	visible: {
+		opacity: 1,
+		y: 0,
+		transition: { duration: 0.5, ease: 'easeIn', type: 'tween' }
+	},
+	hidden: {
+		opacity: 0,
+		y: -100,
+		transition: { duration: 0.5, ease: 'easeOut', type: 'tween' }
+	},
 	background: {
 		backdropFilter: 'blur(10px)',
 		boxShadow:
-			'rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px'
-	},
-	transition: {
-		visible: { duration: 0.5, ease: 'easeIn' },
-		hidden: { duration: 0.5, ease: 'easeIn' },
-		background: { duration: 0.5, ease: 'easeIn' }
+			'rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px',
+		transition: { duration: 0.5, ease: 'easeIn', type: 'tween' }
 	}
 };
 
-const HomeNavBar = () => {
+function HomeNavBar() {
 	const [hidden, setHidden] = useState(false);
 	const [transparency, setTransparency] = useState(true);
 	const [mobileNavOpen, setMobileNavOpen] = useState(false);
 
 	const { scrollY } = useScroll();
+
+	const links = [
+		{ text: 'Sobre mi', link: 'aboutMe' },
+		{ text: 'Experiencia', link: 'experience' },
+		{ text: 'Trabajemos', link: 'workWithMe' },
+		{ text: 'Proyectos', link: 'projects' },
+		{ text: 'Contacto', link: 'contact' }
+	];
 
 	useMotionValueEvent(scrollY, 'change', latest => {
 		const previous = scrollY.getPrevious();
@@ -69,104 +83,17 @@ const HomeNavBar = () => {
 								}}
 							/>
 						)}
-
-						<ul className={`${mobileNavOpen ? styles.mobileNavOpen : ''}`}>
-							<li>
-								<a
-									onClick={() => {
-										window.scrollTo({
-											top:
-												document
-													.getElementById('aboutMe')
-													.getBoundingClientRect().top +
-												window.scrollY -
-												150,
-											behavior: 'smooth'
-										});
-									}}
-									aria-label='Link a la sección sobre mi.'
-								>
-									Sobre mi
-								</a>
-							</li>
-							<li>
-								<a
-									onClick={() => {
-										window.scrollTo({
-											top:
-												document
-													.getElementById('experience')
-													.getBoundingClientRect().top +
-												window.scrollY -
-												150,
-											behavior: 'smooth'
-										});
-									}}
-									aria-label='Link a la sección de experiencia.'
-								>
-									Experiencia
-								</a>
-							</li>
-							<li>
-								<a
-									onClick={() => {
-										window.scrollTo({
-											top:
-												document
-													.getElementById('workWithMe')
-													.getBoundingClientRect().top +
-												window.scrollY -
-												150,
-											behavior: 'smooth'
-										});
-									}}
-									aria-label='Link a la sección de trabaja conmigo.'
-								>
-									Trabajemos
-								</a>
-							</li>
-							<li>
-								<a
-									onClick={() => {
-										window.scrollTo({
-											top:
-												document
-													.getElementById('proyects')
-													.getBoundingClientRect().top +
-												window.scrollY -
-												150,
-											behavior: 'smooth'
-										});
-									}}
-									aria-label='Link a la sección de proyectos.'
-								>
-									Proyectos
-								</a>
-							</li>
-							<li>
-								<a
-									onClick={() => {
-										window.scrollTo({
-											top:
-												document
-													.getElementById('contact')
-													.getBoundingClientRect().top +
-												window.scrollY -
-												150,
-											behavior: 'smooth'
-										});
-									}}
-									aria-label='Link a la sección de contacto.'
-								>
-									Contacto
-								</a>
-							</li>
-						</ul>
+						<MobileNav
+							links={links}
+							mobileNavOpen={mobileNavOpen}
+							setMobileNavOpen={setMobileNavOpen}
+						/>
+						<DesktopNav links={links} />
 					</nav>
 				</header>
 			</Container>
 		</motion.div>
 	);
-};
+}
 
 export default HomeNavBar;
