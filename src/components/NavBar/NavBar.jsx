@@ -11,18 +11,18 @@ const navBarVariants = {
 	visible: {
 		opacity: 1,
 		y: 0,
-		transition: { duration: 0.5, ease: 'easeIn', type: 'tween' }
+		transition: { duration: 0.5, ease: 'easeIn' }
 	},
 	hidden: {
 		opacity: 0,
 		y: -100,
-		transition: { duration: 0.5, ease: 'easeOut', type: 'tween' }
+		transition: { duration: 0.5, ease: 'easeOut' }
 	},
 	background: {
-		backdropFilter: 'blur(10px)',
+		backgroundColor: 'rgba(0, 0, 0, 0.6)',
 		boxShadow:
 			'rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px',
-		transition: { duration: 0.5, ease: 'easeIn', type: 'tween' }
+		transition: { duration: 0.5, ease: 'easeIn' }
 	}
 };
 
