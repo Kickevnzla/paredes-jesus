@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { motion, useScroll, useMotionValueEvent } from 'framer-motion';
 import Container from '../Container/Container';
 import PlanetSvg from '../PlanetSvg';
-import { FaHamburger } from 'react-icons/fa';
+import { RxHamburgerMenu } from 'react-icons/rx';
 import DesktopNav from '../DesktopNav';
 import MobileNav from '../MobileNav';
 
@@ -76,7 +76,7 @@ function HomeNavBar() {
 							<PlanetSvg />
 						</a>
 						{!mobileNavOpen && (
-							<FaHamburger
+							<RxHamburgerMenu
 								className={styles.burger}
 								onClick={() => {
 									setMobileNavOpen(!mobileNavOpen);
