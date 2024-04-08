@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { motion, useScroll, useMotionValueEvent } from 'framer-motion';
 import Container from '../Container/Container';
 import PlanetSvg from '../PlanetSvg';
+import { FaHamburger } from 'react-icons/fa';
 
 const navBarVariants = {
 	visible: { opacity: 1, y: 0 },
@@ -22,6 +23,7 @@ const navBarVariants = {
 const HomeNavBar = () => {
 	const [hidden, setHidden] = useState(false);
 	const [transparency, setTransparency] = useState(true);
+	const [mobileNavOpen, setMobileNavOpen] = useState(false);
 
 	const { scrollY } = useScroll();
 
@@ -59,7 +61,16 @@ const HomeNavBar = () => {
 						>
 							<PlanetSvg />
 						</a>
-						<ul>
+						{!mobileNavOpen && (
+							<FaHamburger
+								className={styles.burger}
+								onClick={() => {
+									setMobileNavOpen(!mobileNavOpen);
+								}}
+							/>
+						)}
+
+						<ul className={`${mobileNavOpen ? styles.mobileNavOpen : ''}`}>
 							<li>
 								<a
 									onClick={() => {
@@ -111,7 +122,7 @@ const HomeNavBar = () => {
 									}}
 									aria-label='Link a la sección de trabaja conmigo.'
 								>
-									Trabaja conmigo
+									Trabajemos
 								</a>
 							</li>
 							<li>
