@@ -33,7 +33,13 @@
 
 		h2 {
 			text-align: start;
+		}
+		h3 {
+			text-align: start;
+			font-size: 0.9rem;
+			font-weight: 400;
 			margin-bottom: 1em;
+			color: rgba(255, 255, 255, 0.486);
 		}
 		p {
 			text-align: start;
@@ -88,6 +94,22 @@
 			.image {
 				display: none;
 			}
+		}
+	}
+}
+
+@media (max-width: 475px) {
+	.content {
+		p {
+			font-size: 1.1rem;
+		}
+	}
+}
+
+@media (max-width: 320px) {
+	.content {
+		p {
+			font-size: 0.9rem;
 		}
 	}
 }

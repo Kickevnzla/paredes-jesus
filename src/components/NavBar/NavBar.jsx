@@ -28,7 +28,7 @@ function HomeNavBar() {
 	const { scrollY } = useScroll();
 
 	const links = [
-		{ text: 'Sobre mi', link: 'aboutMe' },
+		{ text: 'Sobre mí', link: 'aboutMe' },
 		{ text: 'Experiencia', link: 'experience' },
 		{ text: 'Trabajemos', link: 'workWithMe' },
 		{ text: 'Proyectos', link: 'projects' },
@@ -54,7 +54,7 @@ function HomeNavBar() {
 			<Container>
 				<header>
 					<nav className={styles.navBar}>
-						<a
+						<motion.a
 							draggable='false'
 							onClick={() => {
 								window.scrollTo({
@@ -63,9 +63,10 @@ function HomeNavBar() {
 								});
 							}}
 							className={styles.logo}
+							whileHover={{ scale: 1.1 }}
 						>
 							<Logo />
-						</a>
+						</motion.a>
 						{!mobileNavOpen && (
 							<RxHamburgerMenu
 								className={styles.burger}

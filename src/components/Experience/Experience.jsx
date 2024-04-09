@@ -37,17 +37,19 @@ function Experience() {
 			<div className={styles.experience}>
 				<div className={styles.content}>
 					<div>
-						<h2>Desarrollador web</h2>
+						<h2>Desarrollador web full stack</h2>
+						<h3>WOM S.A.</h3>
 						<p>
-							Desarrollador web autodidacta desde hace 2 años. He trabajado en
-							proyectos personales y en proyectos de clientes.
+							Diseño e implementación de nuevas funciones para el portal de
+							autoservicio Mi WOM (front-end y back-end).
 						</p>
 					</div>
 					<div>
 						<h2>Práctica profesional</h2>
+						<h3>WOM S.A.</h3>
 						<p>
-							Realicé una práctica profesional en una empresa de desarrollo de
-							software. Aprendí mucho sobre desarrollo web y trabajo en equipo.
+							Desarrollo de nuevas funciones para el portal de autoservicio Mi
+							WOM (back-end).
 						</p>
 					</div>
 				</div>

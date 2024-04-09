@@ -1,6 +1,6 @@
 @import '../../../styles/variables.scss';
 
-.proyectsContainer {
+.projectsContainer {
 	margin-top: 13em;
 	position: relative;
 
@@ -20,7 +20,7 @@
 		text-align: center;
 	}
 
-	.proyects {
+	.projects {
 		margin-top: 3em;
 		display: flex;
 		justify-content: center;
@@ -34,7 +34,7 @@
 			border-radius: 20px;
 			display: flex;
 			flex-direction: column;
-			justify-content: center;
+			justify-content: start;
 			align-items: center;
 			padding: 1em;
 			gap: 1em;
@@ -53,15 +53,21 @@
 				justify-content: center;
 				align-items: start;
 				gap: 1em;
+				flex-grow: 1;
 
 				p {
 					font-size: 1.3rem;
 				}
-
-				a {
-					padding: 0.5em;
-					border: 1px solid $color-4;
-					border-radius: 10px;
+				div {
+					display: flex;
+					align-items: end;
+					height: 100%;
+					a {
+						height: fit-content;
+						padding: 0.5em;
+						border: 1px solid $color-4;
+						border-radius: 10px;
+					}
 				}
 			}
 		}
@@ -69,7 +75,7 @@
 }
 
 @media (max-width: 1280px) {
-	.proyectsContainer {
+	.projectsContainer {
 		.planet {
 			width: 600px;
 			top: -450px;
@@ -82,13 +88,13 @@
 }
 
 @media (max-width: 1024px) {
-	.proyectsContainer {
+	.projectsContainer {
 		.planet {
 			width: 500px;
 			top: -400px;
 		}
 
-		.proyects {
+		.projects {
 			flex-wrap: wrap;
 			gap: 2em;
 
@@ -100,14 +106,14 @@
 }
 
 @media (max-width: 768px) {
-	.proyectsContainer {
+	.projectsContainer {
 		.planet {
 			width: 400px;
 			top: -250px;
 			left: -45%;
 		}
 
-		.proyects {
+		.projects {
 			article {
 				width: 75%;
 			}

@@ -122,6 +122,7 @@ function MainBanner() {
 					<img draggable='false' src={floatingAstronaut} alt='Main Banner' />
 				</motion.div>
 				<motion.img
+					rel='preload'
 					draggable='false'
 					src={planet1}
 					alt='Planet image'

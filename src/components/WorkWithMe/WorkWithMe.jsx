@@ -17,6 +17,29 @@ function WorkWithMe() {
 		restDelta: 0.001
 	});
 
+	const article = [
+		{
+			title: 'Contactame para trabajar juntos',
+			parraph:
+				'Estoy disponible para trabajar en proyectos de desarrollo web. Si tienes una idea o proyecto en mente, no dudes en contactarme.'
+		},
+		{
+			title: 'Reunamonos para discutir tu proyecto',
+			parraph:
+				'Agendaremos una reunión para discutir tu proyecto y tus necesidades. Juntos encontraremos la mejor solución.'
+		},
+		{
+			title: 'Desarrollo de tu proyecto',
+			parraph:
+				'Una vez que hayamos acordado los detalles, comenzaré a trabajar en tu proyecto. Te mantendré informado en todo momento.'
+		},
+		{
+			title: 'Tu proyecto está listo',
+			parraph:
+				'Tu proyecto estará listo en el tiempo acordado. Ahora puedes disfrutar de tu nuevo sitio web.'
+		}
+	];
+
 	return (
 		<section id='workWithMe' className={styles.workWithMeContainer}>
 			<h1>Trabaja conmigo</h1>
@@ -37,26 +60,13 @@ function WorkWithMe() {
 							/>
 						</svg>
 					</div>
-					<WorkWithMeArticle
-						title='Desarrollador de aplicaciones móviles'
-						parraph='Desarrollador de aplicaciones móviles con React Native. He
-									realizado aplicaciones móviles para Android y iOS.'
-					/>
-					<WorkWithMeArticle
-						title='Desarrollador de aplicaciones móviles'
-						parraph='Desarrollador de aplicaciones móviles con React Native. He
-									realizado aplicaciones móviles para Android y iOS.'
-					/>
-					<WorkWithMeArticle
-						title='Desarrollador de aplicaciones móviles'
-						parraph='Desarrollador de aplicaciones móviles con React Native. He
-									realizado aplicaciones móviles para Android y iOS.'
-					/>
-					<WorkWithMeArticle
-						title='Desarrollador de aplicaciones móviles'
-						parraph='Desarrollador de aplicaciones móviles con React Native. He
-									realizado aplicaciones móviles para Android y iOS.'
-					/>
+					{article.map((article, index) => (
+						<WorkWithMeArticle
+							key={index}
+							title={article.title}
+							parraph={article.parraph}
+						/>
+					))}
 				</div>
 			</div>
 		</section>
