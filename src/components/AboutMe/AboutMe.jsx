@@ -46,11 +46,11 @@ function AboutMe() {
 					<img src={fotoJesus} alt='Foto de Jesús' />
 				</div>
 				<div className={styles.content}>
-					<h1>Sobre mi</h1>
+					<h1>Sobre mí</h1>
 					<p>
-						Soy un desarrollador web autodidacta, apasionado por la tecnología y
-						la programación. Me encanta aprender cosas nuevas y compartir
-						conocimientos con los demás.
+						Soy Jesús Paredes, un apasionado desarrollador en proceso de
+						titulación, con un enfoque especial en desarrollo web, tanto
+						back-end como front-end
 					</p>
 				</div>
 			</div>

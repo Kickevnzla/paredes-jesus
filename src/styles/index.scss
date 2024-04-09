@@ -1,10 +1,32 @@
 @import '../styles/variables.scss';
 
+@font-face {
+	font-family: 'Fira Code';
+	src: url(/src/fonts/FiraCode-Regular.otf);
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Fira Code';
+	src: url(/src/fonts/FiraCode-Medium.otf);
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Fira Code';
+	src: url(/src/fonts/FiraCode-Bold.otf);
+	font-weight: bold;
+	font-style: bold;
+	font-display: swap;
+}
+
 :root {
 	font-family: 'Fira Code', monospace;
-	font-optical-sizing: auto;
-	font-weight: 400;
-	font-style: normal;
+	font-weight: normal;
 	background-color: $color-2;
 	color: white;
 }

@@ -4,6 +4,7 @@
 	justify-content: center;
 	align-items: end;
 	min-height: 600px;
+	padding: 0 10px;
 
 	margin: 4em 0 4em 0;
 
@@ -95,6 +96,14 @@
 			img {
 				max-width: 200px;
 			}
+		}
+	}
+}
+
+@media (max-width: 320px) {
+	.content {
+		p {
+			font-size: 1rem;
 		}
 	}
 }
