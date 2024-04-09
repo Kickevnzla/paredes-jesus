@@ -2,33 +2,27 @@ import styles from './styles/NavBarStyled.module.scss';
 import { useState } from 'react';
 import { motion, useScroll, useMotionValueEvent } from 'framer-motion';
 import Container from '../Container/Container';
-import PlanetSvg from '../PlanetSvg';
 import { RxHamburgerMenu } from 'react-icons/rx';
 import DesktopNav from '../DesktopNav';
 import MobileNav from '../MobileNav';
+import Logo from '../../images/logo-paredes-jesus.svg?react';
 
 const navBarVariants = {
 	visible: {
 		opacity: 1,
 		y: 0,
-		transition: { duration: 0.5, ease: 'easeIn', type: 'tween' }
+		transition: { duration: 0.5, ease: 'easeIn' }
 	},
 	hidden: {
 		opacity: 0,
+		backgroundColor: 'rgba(0, 0, 0, 0)',
 		y: -100,
-		transition: { duration: 0.5, ease: 'easeOut', type: 'tween' }
-	},
-	background: {
-		backdropFilter: 'blur(10px)',
-		boxShadow:
-			'rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px',
-		transition: { duration: 0.5, ease: 'easeIn', type: 'tween' }
+		transition: { duration: 0.5, ease: 'easeOut' }
 	}
 };
 
 function HomeNavBar() {
 	const [hidden, setHidden] = useState(false);
-	const [transparency, setTransparency] = useState(true);
 	const [mobileNavOpen, setMobileNavOpen] = useState(false);
 
 	const { scrollY } = useScroll();
@@ -48,17 +42,13 @@ function HomeNavBar() {
 		} else {
 			setHidden(false);
 		}
-		if (latest < 50) {
-			setTransparency(true);
-		} else {
-			setTransparency(false);
-		}
 	});
 
 	return (
 		<motion.div
 			variants={navBarVariants}
-			animate={hidden ? 'hidden' : transparency ? 'visible' : 'background'}
+			initial='visible'
+			animate={hidden ? 'hidden' : 'visible'}
 			className={styles.navBarContainer}
 		>
 			<Container>
@@ -72,8 +62,9 @@ function HomeNavBar() {
 									behavior: 'smooth'
 								});
 							}}
+							className={styles.logo}
 						>
-							<PlanetSvg />
+							<Logo />
 						</a>
 						{!mobileNavOpen && (
 							<RxHamburgerMenu
