@@ -7,7 +7,7 @@ import planet3 from './planet-3.svg';
 import planet4 from './planet-4.svg';
 import comet from './comet.svg';
 import asteroid from './asteroid.svg';
-import ayCarlitosScreenshot from './ay-carlitos-web-screenshot.webp';
+import aycarlitosScreenshot from './aycarlitos-web-screenshot.webp';
 import paredesJesusScreenshot from './paredes-jesus-web-screenshot.webp';
 import carlosComillasScreenshot from './carlos-comillas-web-screenshot.webp';
 
@@ -21,7 +21,7 @@ export {
 	planet4,
 	comet,
 	asteroid,
-	ayCarlitosScreenshot,
+	aycarlitosScreenshot,
 	paredesJesusScreenshot,
 	carlosComillasScreenshot
 };
