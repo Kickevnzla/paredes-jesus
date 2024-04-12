@@ -1,7 +1,7 @@
 import styles from './styles/Projects.module.scss';
 import {
 	carlosComillasScreenshot,
-	ayCarlitosScreenshot,
+	aycarlitosScreenshot,
 	paredesJesusScreenshot,
 	planet2
 } from '../../images';
@@ -34,9 +34,9 @@ function Projects() {
 			link: 'https://carloscomillas.cl/'
 		},
 		{
-			image: ayCarlitosScreenshot,
-			title: 'Ay Carlitos',
-			description: 'Tienda en línea para la venta de productos Ay Carlitos.',
+			image: aycarlitosScreenshot,
+			title: 'AyCarlitos',
+			description: 'Tienda en línea para la venta de juguetes para adultos.',
 			link: 'https://aycarlitos.cl/'
 		},
 		{

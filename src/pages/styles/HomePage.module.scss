@@ -6,7 +6,7 @@
 	height: 20px;
 }
 
-$total: 150;
+$total: 100;
 @for $i from 1 through $total {
 	$scale: random(2) - 0.4;
 
@@ -23,7 +23,7 @@ $total: 150;
 
 	@keyframes raise#{$i} {
 		to {
-			bottom: 600vh;
+			bottom: 100%;
 			transform: scale(0.3);
 		}
 	}
