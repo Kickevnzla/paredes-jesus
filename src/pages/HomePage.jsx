@@ -7,9 +7,6 @@ import WorkWithMe from '../components/WorkWithMe';
 import Projects from '../components/Projects';
 import Contact from '../components/Contact';
 import GoTop from '../components/GoTop';
-import { inject } from '@vercel/analytics/react';
-
-inject();
 
 function HomePage() {
 	return (
