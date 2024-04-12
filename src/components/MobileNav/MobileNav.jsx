@@ -39,7 +39,7 @@ function MobileNav({ links, mobileNavOpen, setMobileNavOpen }) {
 					<ul>
 						{links.map((link, index) => (
 							<li key={index}>
-								<a
+								<span
 									onClick={() => {
 										window.scrollTo({
 											top:
@@ -53,10 +53,9 @@ function MobileNav({ links, mobileNavOpen, setMobileNavOpen }) {
 
 										setMobileNavOpen(false);
 									}}
-									aria-label={`Link a la sección ${link.text}.`}
 								>
 									{link.text}
-								</a>
+								</span>
 							</li>
 						))}
 					</ul>
