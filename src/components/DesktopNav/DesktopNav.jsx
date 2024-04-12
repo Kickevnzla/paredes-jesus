@@ -6,7 +6,7 @@ function DesktopNav({ links }) {
 		<ul className={styles.desktopNav}>
 			{links.map((link, index) => (
 				<li key={index}>
-					<motion.a
+					<motion.span
 						whileHover={{ scale: 1.1, color: '#8eb4ff' }}
 						transition={{ duration: 0.2 }}
 						onClick={() => {
@@ -19,10 +19,9 @@ function DesktopNav({ links }) {
 								behavior: 'smooth'
 							});
 						}}
-						aria-label={`Link a la sección ${link.text}.`}
 					>
 						{link.text}
-					</motion.a>
+					</motion.span>
 				</li>
 			))}
 		</ul>

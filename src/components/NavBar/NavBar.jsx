@@ -54,7 +54,7 @@ function HomeNavBar() {
 			<Container>
 				<header>
 					<nav className={styles.navBar}>
-						<motion.a
+						<motion.span
 							draggable='false'
 							onClick={() => {
 								window.scrollTo({
@@ -66,7 +66,7 @@ function HomeNavBar() {
 							whileHover={{ scale: 1.1 }}
 						>
 							<Logo />
-						</motion.a>
+						</motion.span>
 						{!mobileNavOpen && (
 							<RxHamburgerMenu
 								className={styles.burger}
