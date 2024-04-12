@@ -90,6 +90,7 @@ function MainBanner() {
 							target='_blank'
 							variants={socialVariants}
 							whileHover='hover'
+							aria-label='Perfil de GitHub'
 						>
 							<FaGithub />
 						</motion.a>
@@ -99,6 +100,7 @@ function MainBanner() {
 							target='_blank'
 							variants={socialVariants}
 							whileHover='hover'
+							aria-label='Perfil de LinkedIn'
 						>
 							<FaLinkedin />
 						</motion.a>
@@ -108,6 +110,7 @@ function MainBanner() {
 							target='_blank'
 							variants={socialVariants}
 							whileHover='hover'
+							aria-label='Perfil de Instagram'
 						>
 							<FaInstagram />
 						</motion.a>
