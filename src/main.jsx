@@ -1,24 +1,11 @@
-import { createRoot } from 'react-dom/client';
 import './styles/normalize.scss';
 import './styles/index.scss';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
 
-import HomePage from './pages/HomePage';
-import NotFoundPage from './pages/NotFoundPage';
-
-const router = createBrowserRouter([
-	{
-		path: '/',
-		element: <HomePage />,
-		errorElement: <NotFoundPage />
-	}
-]);
-
-const root = createRoot(document.getElementById('root'));
-
-root.render(
+ReactDOM.createRoot(document.getElementById('root')).render(
 	<React.StrictMode>
-		<RouterProvider router={router} />
+		<App />
 	</React.StrictMode>
 );

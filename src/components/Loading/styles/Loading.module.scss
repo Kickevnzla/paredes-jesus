@@ -1,0 +1,15 @@
+.loading {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: calc(100vh - 136px - 150px);
+	width: 100%;
+	gap: 0.3em;
+
+	.bar {
+		height: 50px;
+		width: 10px;
+		background-color: white;
+		border-radius: 20px;
+	}
+}
