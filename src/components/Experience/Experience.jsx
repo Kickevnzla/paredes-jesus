@@ -32,6 +32,7 @@ function Experience() {
 				animate='idle'
 				style={{ originX: 0.5, originY: 0.5 }}
 				className={styles.sateliteMovile}
+				rel='preload'
 			/>
 			<h1>Experiencia</h1>
 			<div className={styles.experience}>
@@ -61,6 +62,7 @@ function Experience() {
 						initial='hidden'
 						animate='idle'
 						style={{ originX: 0.5, originY: 0.5 }}
+						rel='preload'
 					/>
 				</div>
 			</div>

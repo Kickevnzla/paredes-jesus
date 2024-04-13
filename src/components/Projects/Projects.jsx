@@ -57,6 +57,7 @@ function Projects() {
 				animate='idle'
 				style={{ originX: 0.5, originY: 0.5 }}
 				className={styles.planet}
+				rel='preload'
 			/>
 			<h1>Proyectos</h1>
 			<div className={styles.projects}>
@@ -64,6 +65,7 @@ function Projects() {
 					<article key={index}>
 						<div className={styles.image}>
 							<img
+								rel='preload'
 								draggable='false'
 								src={project.image}
 								alt={`Screenshot del proyecto ${project.title}.`}

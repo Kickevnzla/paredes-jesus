@@ -122,7 +122,12 @@ function MainBanner() {
 					variants={astronautVariants}
 					className={styles.image}
 				>
-					<img draggable='false' src={floatingAstronaut} alt='Main Banner' />
+					<img
+						rel='preload'
+						draggable='false'
+						src={floatingAstronaut}
+						alt='Main Banner'
+					/>
 				</motion.div>
 				<motion.img
 					rel='preload'

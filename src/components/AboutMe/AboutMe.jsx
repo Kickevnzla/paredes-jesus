@@ -43,7 +43,7 @@ function AboutMe() {
 							animate={'orbit'}
 						/>
 					</svg>
-					<img src={fotoJesus} alt='Foto de Jesús' />
+					<img rel='preload' src={fotoJesus} alt='Foto de Jesús' />
 				</div>
 				<div className={styles.content}>
 					<h1>Sobre mí</h1>
