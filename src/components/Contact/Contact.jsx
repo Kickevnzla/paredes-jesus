@@ -55,8 +55,8 @@ function Contact() {
 					<h2>Información de Contacto</h2>
 					<p>
 						<strong>Correo: </strong>
-						<a href="mailto:contact@paredesjesus.com">
-							contact@paredesjesus.com
+						<a href="mailto:contact@jesusparedes.com">
+							contact@jesusparedes.com
 						</a>
 					</p>
 				</div>
